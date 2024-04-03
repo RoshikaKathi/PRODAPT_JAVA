@@ -73,17 +73,33 @@ public class ArithmeticOperations {
         System.out.println("Div floats with generic method: " + ArithmeticOperations.Div(f1, f2));
         System.out.println();
         
-        // Adding 2 integers through a list
-        Vector<Number> l = new Vector<Number>();
+        /// Adding 2 integers through a list
+        Vector<Number> l = new Vector<>();
         l.add(new Integer(34));
         l.add(new Integer(43));
+        // Subtracting 2 integers through a list
+        Vector<Number> s = new Vector<>();
+        s.add(new Double(12.56));
+        s.add(new Float(3.6778));
+        //Dividing 2 integers through a list
+        Vector<Number> d = new Vector<>();
+        d.add(new Integer(20));
+        d.add(new Integer(5));
+        //multiple 2 integers through a list
+        Vector<Number> m = new Vector<>();
+        m.add(new Integer(34));
+        m.add(new Integer(43));
         System.out.println("Add with upper bounded wildcard: " + ArithmeticOperations.add(l));
-        System.out.println("Mul with upper bounded wildcard: " + ArithmeticOperations.mul(l));
-        System.out.println("Sub with upper bounded wildcard: " + ArithmeticOperations.sub(l));
-        System.out.println("Div with upper bounded wildcard: " + ArithmeticOperations.Div(l));
-        System.out.println();
+        System.out.println("Sub with upper bounded wildcard: " + ArithmeticOperations.sub(s));
+        System.out.println("Division with upper bounded wildcard: " + ArithmeticOperations.Div(d));
+        System.out.println("Multiple with upper bounded wildcard: " + ArithmeticOperations.mul(m));
  
+        System.out.println(" ");
         // Dumping the list to the console.
         ArithmeticOperations.dumpList(l);
+        ArithmeticOperations.dumpList(s);
+        ArithmeticOperations.dumpList(d);
+        ArithmeticOperations.dumpList(m);
+ 
     }
 }
