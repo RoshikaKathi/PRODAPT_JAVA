@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Form</title>
+    <link rel="stylesheet" href="../css/usecase.css">
+</head>
+
+<body>
+    <h1>Presenting the Use Case</h1>
+    <hr>
+    <div class="formdetails">
+        <h2>Add Customer</h2>
+        <form id="custForm">
+            <div class="group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="group">
+                <label for="email">Email id:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="group">
+                <label for="phn">Contact Number:</label>
+                <input type="tel" id="phn" name="phn" placeholder="Enter Contact Number" required
+                    pattern="[7-9][0-9]{9}">
+                <span class="error" id="contactError"></span>
+            </div>
+            <div class="group">
+                <label for="acct">Account Type:</label>
+                <select id="acct" name="acct" required>
+                    <option value="">Select Account Type</option>
+                    <option value="Current">Current</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Fixed Deposit">Fixed Deposit</option>
+                </select>
+                <span class="error" id="accountError"></span>
+            </div>
+            <button type="button" onclick="addCustomer()">Add Customer</button>
+        </form>
+        <table id="detailsList">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact No</th>
+                    <th>Account Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be added dynamically here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/usecase.js"></script>
+</body>
+
+</html>
